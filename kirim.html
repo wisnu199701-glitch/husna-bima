@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Kirim Undangan Husna</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=Instrument+Serif&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { padding: 2.5rem 16px 4rem; }
+    .wadah { max-width: 720px; margin: 0 auto; display: grid; gap: 1.5rem; }
+    .wadah h1 { font-family: var(--f-judul); font-weight: 400; font-size: 2.4rem; margin: 0; line-height: 1.1; }
+    .isian input, .isian textarea { font: inherit; width: 100%; padding: .75rem .9rem; border: 1px solid var(--garis); border-radius: 10px; background: #fff; }
+    .isian label { font-size: .85rem; font-weight: 600; }
+    .bantu { font-size: .85rem; color: var(--redup); margin: 0; }
+    .hasil { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem; }
+    .hasil li { background: #fff; border-radius: 12px; padding: .9rem 1rem; display: grid; gap: .5rem; }
+    .hasil b { font-weight: 600; }
+    .hasil code { font-size: .8rem; color: var(--redup); overflow-wrap: anywhere; }
+    .hasil .aksi { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .hasil a.tombol { text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wadah">
+    <div>
+      <p class="label">Khusus Husna</p>
+      <h1>Kirim undangan</h1>
+    </div>
+
+    <div class="isian">
+      <label for="alamat">Link undangan</label>
+      <input id="alamat" type="url" placeholder="https://undangan-husna.netlify.app/">
+      <p class="bantu">Link website undangan setelah di-upload (lihat PANDUAN.md langkah 3).</p>
+    </div>
+
+    <div class="isian">
+      <label for="nama">Nama tamu (satu nama per baris)</label>
+      <textarea id="nama" rows="6">Bapak Ahmad &amp; Keluarga
+Ustadzah Fatimah
+Teman-teman Kantor</textarea>
+    </div>
+
+    <div class="isian">
+      <label for="pesan">Isi pesan WhatsApp</label>
+      <textarea id="pesan" rows="9">Assalamu'alaikum warahmatullahi wabarakatuh
+
+Kepada Yth. {nama}
+
+Tanpa mengurangi rasa hormat, dengan memohon rahmat dan ridha Allah SWT, kami bermaksud mengundang Anda di acara pernikahan kami.
+
+Detail acara dan konfirmasi kehadiran bisa dilihat di sini:
+{link}
+
+Merupakan kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa restu.
+
+Wassalamu'alaikum warahmatullahi wabarakatuh
+Husna &amp; Bima</textarea>
+      <p class="bantu">{nama} dan {link} akan diganti otomatis untuk setiap tamu.</p>
+    </div>
+
+    <ul class="hasil" id="hasil"></ul>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    (function () {
+      var $ = function (id) { return document.getElementById(id); };
+      try { var simpan = localStorage.getItem("kirim-husna-alamat"); if (simpan) $("alamat").value = simpan; } catch (e) {}
+      if (!$("alamat").value && /^https?:/.test(location.protocol)) {
+        $("alamat").value = location.href.replace(/kirim\.html.*$/, "");
+      }
+
+      function buat() {
+        try { localStorage.setItem("kirim-husna-alamat", $("alamat").value); } catch (e) {}
+        var dasar = $("alamat").value.trim();
+        var ul = $("hasil");
+        ul.innerHTML = "";
+        $("nama").value.split("\n").map(function (n) { return n.trim(); }).filter(Boolean).forEach(function (n) {
+          var link = dasar + (dasar.indexOf("?") >= 0 ? "&" : "?") + "to=" + encodeURIComponent(n);
+          var teks = $("pesan").value.split("{nama}").join(n).split("{link}").join(link);
+          var li = document.createElement("li");
+          var b = document.createElement("b"); b.textContent = n;
+          var c = document.createElement("code"); c.textContent = link;
+          var aksi = document.createElement("div"); aksi.className = "aksi";
+          var wa = document.createElement("a");
+          wa.className = "tombol tombol--kecil";
+          wa.href = "https://wa.me/?text=" + encodeURIComponent(teks);
+          wa.target = "_blank"; wa.rel = "noopener";
+          wa.textContent = "Kirim via WhatsApp";
+          var s1 = tombolSalin("Salin pesan", teks);
+          var s2 = tombolSalin("Salin link", link);
+          aksi.append(wa, s1, s2);
+          li.append(b, c, aksi);
+          ul.appendChild(li);
+        });
+      }
+
+      function tombolSalin(label, isi) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "tombol tombol--kecil tombol--garis";
+        b.textContent = label;
+        b.addEventListener("click", function () {
+          var ok = function () { toast("Tersalin"); };
+          if (navigator.clipboard) navigator.clipboard.writeText(isi).then(ok, function () { toast("Gagal menyalin"); });
+        });
+        return b;
+      }
+
+      var idT;
+      function toast(t) {
+        var el = $("toast"); el.textContent = t; el.classList.add("tampil");
+        clearTimeout(idT); idT = setTimeout(function () { el.classList.remove("tampil"); }, 1800);
+      }
+
+      ["alamat", "nama", "pesan"].forEach(function (id) { $(id).addEventListener("input", buat); });
+      buat();
+    })();
+  </script>
+</body>
+</html>
