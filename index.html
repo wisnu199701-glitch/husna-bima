@@ -7,10 +7,10 @@
   <meta name="description" content="Dengan memohon rahmat Allah SWT, kami mengundang Anda di hari bahagia kami. Jum'at, 23 Oktober 2026.">
   <meta property="og:title" content="Undangan Pernikahan Husna &amp; Bima">
   <meta property="og:description" content="Jum'at, 23 Oktober 2026. Mohon doa restu dan kehadirannya.">
-  <meta name="theme-color" content="#16302B">
+  <meta name="theme-color" content="#4A3A5C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Pinyon+Script&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Permanent+Marker&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="terkunci">
@@ -18,96 +18,117 @@
   <!-- Gambar-gambar hiasan yang dipakai berulang -->
   <svg class="defs" aria-hidden="true" focusable="false">
     <defs>
-      <radialGradient id="gKelopak" cx="50%" cy="85%" r="80%">
-        <stop offset="0" stop-color="#F7E3DF"/>
-        <stop offset="1" stop-color="#D99E97"/>
-      </radialGradient>
-      <radialGradient id="gKelopakPutih" cx="50%" cy="85%" r="80%">
-        <stop offset="0" stop-color="#FFFFFF"/>
-        <stop offset="1" stop-color="#E9E3D6"/>
-      </radialGradient>
-      <radialGradient id="gCahaya" cx="50%" cy="50%" r="50%">
-        <stop offset="0" stop-color="#FFF1C4"/>
-        <stop offset=".6" stop-color="#F2C86B"/>
-        <stop offset="1" stop-color="#C8913A"/>
-      </radialGradient>
+      <linearGradient id="gKelopak" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#C7B2DD"/>
+        <stop offset="1" stop-color="#EDE4F5"/>
+      </linearGradient>
+      <linearGradient id="gKelopakBelakang" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0" stop-color="#D9CBE8"/>
+        <stop offset="1" stop-color="#F6F1FA"/>
+      </linearGradient>
 
-      <symbol id="bunga" viewBox="0 0 40 40">
-        <g fill="url(#gKelopak)">
-          <ellipse cx="20" cy="10" rx="7.5" ry="10"/>
-          <ellipse cx="20" cy="10" rx="7.5" ry="10" transform="rotate(72 20 20)"/>
-          <ellipse cx="20" cy="10" rx="7.5" ry="10" transform="rotate(144 20 20)"/>
-          <ellipse cx="20" cy="10" rx="7.5" ry="10" transform="rotate(216 20 20)"/>
-          <ellipse cx="20" cy="10" rx="7.5" ry="10" transform="rotate(288 20 20)"/>
+      <!-- Kelopak lily -->
+      <path id="kelopakLily" d="M30 30C23.5 23 22 11 30 1.5C38 11 36.5 23 30 30Z"/>
+
+      <!-- Bunga lily (tampak depan) -->
+      <symbol id="bunga" viewBox="0 0 60 60">
+        <g fill="url(#gKelopakBelakang)" stroke="#6B5480" stroke-width=".7" stroke-linejoin="round">
+          <use href="#kelopakLily" transform="rotate(30 30 30)"/>
+          <use href="#kelopakLily" transform="rotate(150 30 30)"/>
+          <use href="#kelopakLily" transform="rotate(270 30 30)"/>
         </g>
-        <g fill="#F9ECE9" opacity=".75">
-          <ellipse cx="20" cy="14" rx="3.5" ry="6"/>
-          <ellipse cx="20" cy="14" rx="3.5" ry="6" transform="rotate(72 20 20)"/>
-          <ellipse cx="20" cy="14" rx="3.5" ry="6" transform="rotate(144 20 20)"/>
-          <ellipse cx="20" cy="14" rx="3.5" ry="6" transform="rotate(216 20 20)"/>
-          <ellipse cx="20" cy="14" rx="3.5" ry="6" transform="rotate(288 20 20)"/>
+        <g fill="url(#gKelopak)" stroke="#5E4A70" stroke-width=".8" stroke-linejoin="round">
+          <use href="#kelopakLily"/>
+          <use href="#kelopakLily" transform="rotate(120 30 30)"/>
+          <use href="#kelopakLily" transform="rotate(240 30 30)"/>
         </g>
-        <circle cx="20" cy="20" r="4" fill="#C9A45C"/>
-        <circle cx="18.6" cy="18.8" r="1.2" fill="#F3DFA6"/>
+        <g fill="none" stroke="#8C74A6" stroke-width=".5" stroke-linecap="round">
+          <path d="M30 27Q29 16 30 7"/>
+          <path d="M30 27Q29 16 30 7" transform="rotate(120 30 30)"/>
+          <path d="M30 27Q29 16 30 7" transform="rotate(240 30 30)"/>
+        </g>
+        <g stroke="#5E4A70" stroke-width=".6" stroke-linecap="round">
+          <path d="M30 30L30 17M30 30L41 24M30 30L41 37M30 30L30 43M30 30L19 37M30 30L19 24"/>
+        </g>
+        <g fill="#B5764E">
+          <ellipse cx="30" cy="16" rx="1.1" ry="2"/>
+          <ellipse cx="42" cy="23.5" rx="1.1" ry="2" transform="rotate(60 42 23.5)"/>
+          <ellipse cx="42" cy="37.5" rx="1.1" ry="2" transform="rotate(120 42 37.5)"/>
+          <ellipse cx="30" cy="44" rx="1.1" ry="2"/>
+          <ellipse cx="18" cy="37.5" rx="1.1" ry="2" transform="rotate(60 18 37.5)"/>
+          <ellipse cx="18" cy="23.5" rx="1.1" ry="2" transform="rotate(120 18 23.5)"/>
+        </g>
+        <circle cx="30" cy="30" r="2.2" fill="#EDB083"/>
       </symbol>
 
-      <symbol id="bungaPutih" viewBox="0 0 40 40">
-        <g fill="url(#gKelopakPutih)">
-          <ellipse cx="20" cy="9" rx="5" ry="9"/>
-          <ellipse cx="20" cy="9" rx="5" ry="9" transform="rotate(45 20 20)"/>
-          <ellipse cx="20" cy="9" rx="5" ry="9" transform="rotate(90 20 20)"/>
-          <ellipse cx="20" cy="9" rx="5" ry="9" transform="rotate(135 20 20)"/>
-          <ellipse cx="20" cy="9" rx="5" ry="9" transform="rotate(180 20 20)"/>
-          <ellipse cx="20" cy="9" rx="5" ry="9" transform="rotate(225 20 20)"/>
-          <ellipse cx="20" cy="9" rx="5" ry="9" transform="rotate(270 20 20)"/>
-          <ellipse cx="20" cy="9" rx="5" ry="9" transform="rotate(315 20 20)"/>
-        </g>
-        <circle cx="20" cy="20" r="3.4" fill="#D8B56A"/>
+      <!-- Kuncup lily -->
+      <symbol id="kuncup" viewBox="0 0 20 60">
+        <path d="M10 60V34" stroke="#8C74A6" stroke-width="1" fill="none"/>
+        <path d="M10 36C3 28 4 12 10 1C16 12 17 28 10 36Z" fill="url(#gKelopak)" stroke="#5E4A70" stroke-width=".8"/>
+        <path d="M10 34Q9 20 10 5" stroke="#8C74A6" stroke-width=".5" fill="none"/>
       </symbol>
 
+      <!-- Daun peach -->
+      <symbol id="daunPeach" viewBox="0 0 30 70">
+        <path d="M15 70C15 50 14 28 16 2" stroke="#E2A274" stroke-width=".9" fill="none"/>
+        <g fill="#F0B98E" opacity=".9">
+          <path d="M15 58C8 54 4 46 3 38C9 42 13 49 15 58Z"/>
+          <path d="M15 50C22 46 26 38 27 30C21 34 17 41 15 50Z"/>
+          <path d="M15 38C9 34 6 26 6 18C11 22 14 30 15 38Z"/>
+          <path d="M16 28C22 24 24 16 24 9C19 13 17 20 16 28Z"/>
+          <path d="M16 14C12 11 11 6 12 1C15 4 16 9 16 14Z"/>
+        </g>
+      </symbol>
+
+      <!-- Daun lilac -->
       <symbol id="daun" viewBox="0 0 40 16">
-        <path d="M1 8C10 -1 28 -1 39 8C28 17 10 17 1 8Z" fill="#6F8F72"/>
-        <path d="M2 8H36" stroke="#4E6D55" stroke-width=".8" fill="none"/>
+        <path d="M1 8C10 -1 28 -1 39 8C28 17 10 17 1 8Z" fill="#E3D8EE" stroke="#9C88B4" stroke-width=".6"/>
+        <path d="M2 8H36" stroke="#9C88B4" stroke-width=".5" fill="none"/>
       </symbol>
 
       <!-- Rangkaian bunga untuk sudut: tumbuh dari titik (0,0) -->
       <symbol id="rangkaian" viewBox="0 0 200 150">
-        <path d="M-4 6C40 14 80 40 120 58S170 96 196 104" fill="none" stroke="#5E7D63" stroke-width="1.6"/>
-        <path d="M30 14C44 40 50 70 46 108" fill="none" stroke="#5E7D63" stroke-width="1.3"/>
+        <path d="M-4 6C40 14 80 40 120 58S170 96 196 104" fill="none" stroke="#9C88B4" stroke-width="1.1"/>
+        <path d="M30 14C44 40 50 70 46 108" fill="none" stroke="#9C88B4" stroke-width="1"/>
+        <use href="#daunPeach" x="58" y="10" width="22" height="52" transform="rotate(-40 69 36)"/>
+        <use href="#daunPeach" x="140" y="58" width="20" height="48" transform="rotate(-70 150 82)"/>
+        <use href="#daunPeach" x="12" y="66" width="18" height="44" transform="rotate(20 21 88)"/>
         <use href="#daun" x="70" y="20" width="44" height="18" transform="rotate(28 92 29)"/>
         <use href="#daun" x="112" y="60" width="40" height="16" transform="rotate(-18 132 68)"/>
         <use href="#daun" x="150" y="84" width="38" height="15" transform="rotate(40 169 91)"/>
         <use href="#daun" x="28" y="52" width="40" height="16" transform="rotate(95 48 60)"/>
         <use href="#daun" x="8" y="18" width="36" height="14" transform="rotate(-30 26 25)"/>
-        <use href="#daun" x="48" y="80" width="34" height="14" transform="rotate(60 65 87)"/>
-        <use href="#bungaPutih" x="96" y="34" width="34" height="34"/>
-        <use href="#bunga" x="30" y="2" width="56" height="56"/>
-        <use href="#bunga" x="130" y="72" width="36" height="36"/>
-        <use href="#bungaPutih" x="28" y="92" width="28" height="28"/>
-        <use href="#bunga" x="0" y="34" width="34" height="34"/>
-        <circle cx="178" cy="102" r="4" fill="#E2B4AD"/>
-        <circle cx="186" cy="96" r="3" fill="#F2DAD5"/>
-        <circle cx="60" cy="118" r="3.5" fill="#E2B4AD"/>
+        <use href="#kuncup" x="100" y="28" width="14" height="42" transform="rotate(40 107 49)"/>
+        <use href="#bunga" x="26" y="0" width="62" height="62"/>
+        <use href="#bunga" x="124" y="66" width="42" height="42"/>
+        <use href="#bunga" x="0" y="36" width="36" height="36"/>
+        <use href="#kuncup" x="44" y="86" width="12" height="36" transform="rotate(-20 50 104)"/>
+        <circle cx="180" cy="104" r="2.5" fill="#EDB083"/>
+        <circle cx="188" cy="97" r="1.8" fill="#D9CBE8"/>
+        <circle cx="66" cy="122" r="2.2" fill="#EDB083"/>
       </symbol>
 
-      <symbol id="lampion" viewBox="0 0 40 120">
-        <path d="M20 0V30" stroke="#C9A45C" stroke-width="1"/>
-        <circle cx="20" cy="28" r="2.4" fill="none" stroke="#C9A45C" stroke-width="1.2"/>
-        <path d="M11 38L20 30L29 38Z" fill="#C9A45C"/>
-        <path d="M8 38H32L36 62L32 86H8L4 62Z" fill="#8B6A2E" stroke="#E4C98A" stroke-width="1.2"/>
-        <path d="M12 42H28L31 62L28 82H12L9 62Z" fill="url(#gCahaya)"/>
-        <path d="M20 42V82M9 62H31" stroke="#8B6A2E" stroke-width="1.2"/>
-        <path d="M13 86H27L20 98Z" fill="#C9A45C"/>
-        <path d="M20 98V110" stroke="#C9A45C" stroke-width="1"/>
-        <circle cx="20" cy="112" r="2.2" fill="#C9A45C"/>
+      <!-- Kupu-kupu -->
+      <symbol id="kupu" viewBox="0 0 40 30">
+        <path d="M20 15C14 2 2 0 3 8C4 14 12 15 20 15Z" fill="#C9B4DF" stroke="#6B5480" stroke-width=".7"/>
+        <path d="M20 15C26 2 38 0 37 8C36 14 28 15 20 15Z" fill="#C9B4DF" stroke="#6B5480" stroke-width=".7"/>
+        <path d="M20 15C13 17 7 24 10 27C13 29 18 22 20 15Z" fill="#F0C6A6" stroke="#6B5480" stroke-width=".7"/>
+        <path d="M20 15C27 17 33 24 30 27C27 29 22 22 20 15Z" fill="#F0C6A6" stroke="#6B5480" stroke-width=".7"/>
+        <path d="M20 8V24" stroke="#4A3A5C" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M20 8Q18 4 16 3M20 8Q22 4 24 3" stroke="#4A3A5C" stroke-width=".6" fill="none"/>
+      </symbol>
+
+      <!-- Bingkai segi enam -->
+      <symbol id="heksa" viewBox="0 0 240 240">
+        <polygon points="226,124 175,212 72,212 21,124 72,36 175,36" fill="none" stroke="#CFE4EC" stroke-width="5" stroke-linejoin="round"/>
+        <polygon points="220,120 170,206.6 70,206.6 20,120 70,33.4 170,33.4" fill="rgba(255,255,255,.9)" stroke="#6B5480" stroke-width="3" stroke-linejoin="round"/>
       </symbol>
 
       <symbol id="hiasan" viewBox="0 0 120 20">
-        <path d="M0 10H44M76 10H120" stroke="#C9A45C" stroke-width=".9"/>
-        <path d="M60 2L68 10L60 18L52 10Z" fill="none" stroke="#C9A45C" stroke-width="1"/>
-        <circle cx="60" cy="10" r="2.4" fill="#C9A45C"/>
-        <circle cx="47" cy="10" r="1.6" fill="#C9A45C"/>
-        <circle cx="73" cy="10" r="1.6" fill="#C9A45C"/>
+        <path d="M0 10H46M74 10H120" stroke="#B9A5D3" stroke-width=".9"/>
+        <use href="#bunga" x="50" y="0" width="20" height="20"/>
+        <circle cx="42" cy="10" r="1.6" fill="#EDB083"/>
+        <circle cx="78" cy="10" r="1.6" fill="#EDB083"/>
       </symbol>
     </defs>
   </svg>
@@ -120,37 +141,41 @@
     <div class="tirai tirai--kanan" aria-hidden="true"></div>
     <div class="tirai-atas" aria-hidden="true"></div>
     <div class="tirai-lambang" aria-hidden="true">
+      <svg class="tirai-lambang__bunga"><use href="#bunga"/></svg>
       <span lang="ar" dir="rtl">بِسْمِ ٱللَّٰهِ</span>
     </div>
 
     <section class="sampul" aria-label="Sampul undangan">
       <div class="bintang" id="bintang" aria-hidden="true"></div>
-      <svg class="bulan" viewBox="0 0 50 50" aria-hidden="true"><path d="M31 4A21 21 0 1 0 47 36A17 17 0 1 1 31 4Z" fill="#F3DFA6"/></svg>
-      <div class="lampion-baris" aria-hidden="true">
-        <svg class="lampion lampion--1"><use href="#lampion"/></svg>
-        <svg class="lampion lampion--2"><use href="#lampion"/></svg>
-        <svg class="lampion lampion--3"><use href="#lampion"/></svg>
-      </div>
+      <img class="taman" src="gambar/taman.jpg" alt="" aria-hidden="true">
+      <svg class="kupu kupu--1" aria-hidden="true"><use href="#kupu"/></svg>
+      <svg class="kupu kupu--2" aria-hidden="true"><use href="#kupu"/></svg>
+      <svg class="kupu kupu--3" aria-hidden="true"><use href="#kupu"/></svg>
 
       <div class="sampul__isi">
-        <p class="label label--terang">Undangan Pernikahan</p>
-        <div class="lengkung">
-          <svg class="lengkung__bunga lengkung__bunga--kiri" aria-hidden="true"><use href="#rangkaian"/></svg>
-          <svg class="lengkung__bunga lengkung__bunga--kanan" aria-hidden="true"><use href="#rangkaian"/></svg>
-          <p class="lengkung__arab" lang="ar" dir="rtl">بَارَكَ ٱللَّٰهُ لَكُمَا</p>
-          <h1 class="nama-pasangan">
+        <p class="sampul__judul">Undangan</p>
+        <p class="sampul__tgl" data-isi="hariUtama">Jum'at, 23 Oktober 2026</p>
+
+        <div class="heksa heksa--sampul">
+          <svg class="heksa__bingkai" aria-hidden="true"><use href="#heksa"/></svg>
+          <svg class="heksa__daun heksa__daun--1" aria-hidden="true"><use href="#daunPeach"/></svg>
+          <svg class="heksa__daun heksa__daun--2" aria-hidden="true"><use href="#daunPeach"/></svg>
+          <svg class="heksa__lily heksa__lily--1" aria-hidden="true"><use href="#bunga"/></svg>
+          <svg class="heksa__lily heksa__lily--2" aria-hidden="true"><use href="#bunga"/></svg>
+          <svg class="heksa__lily heksa__lily--3" aria-hidden="true"><use href="#bunga"/></svg>
+          <h1 class="heksa__nama">
             <span data-isi="wanita.panggilan">Husna</span>
             <span class="dan">&amp;</span>
             <span data-isi="pria.panggilan">Bima</span>
           </h1>
-          <p class="sampul__tgl" data-isi="tanggalPendek">23 · 10 · 2026</p>
         </div>
+
         <div class="sampul__tamu">
-          <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+          <p class="sampul__yth">Kepada Yth<br>BAPAK/IBU/Sdr/i :</p>
           <p class="sampul__nama-tamu" id="namaTamu">Tamu Undangan</p>
-          <p class="sampul__maaf">Mohon maaf apabila ada kesalahan penulisan nama dan gelar</p>
+          <p class="sampul__maaf">Maaf bila ada kesalahan dalam penulisan nama, gelar dan alamat</p>
         </div>
-        <button class="tombol tombol--emas tombol--denyut" id="bukaUndangan" type="button">
+        <button class="tombol tombol--denyut" id="bukaUndangan" type="button">
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M3.5 7.5l8.5 6 8.5-6M3.5 6.5h17v11h-17z"/></svg>
           Buka undangan
         </button>
@@ -164,30 +189,36 @@
     <section class="bagian hero" id="beranda">
       <svg class="sudut sudut--kiri-atas" aria-hidden="true"><use href="#rangkaian"/></svg>
       <svg class="sudut sudut--kanan-atas" aria-hidden="true"><use href="#rangkaian"/></svg>
-      <svg class="sudut sudut--kiri-bawah" aria-hidden="true"><use href="#rangkaian"/></svg>
-      <svg class="sudut sudut--kanan-bawah" aria-hidden="true"><use href="#rangkaian"/></svg>
+      <svg class="kupu kupu--hero" aria-hidden="true"><use href="#kupu"/></svg>
+      <img class="taman taman--bawah" src="gambar/taman.jpg" alt="" aria-hidden="true">
 
       <p class="label hero__label" data-anim="naik">Walimatul 'Ursy</p>
-      <div class="hero__lengkung" data-anim="zoom">
-        <div class="monogram">
-          <span data-isi="wanita.inisial">H</span><i>&amp;</i><span data-isi="pria.inisial">B</span>
-        </div>
+      <div class="heksa" data-anim="zoom">
+        <svg class="heksa__bingkai" aria-hidden="true"><use href="#heksa"/></svg>
+        <svg class="heksa__daun heksa__daun--1" aria-hidden="true"><use href="#daunPeach"/></svg>
+        <svg class="heksa__daun heksa__daun--2" aria-hidden="true"><use href="#daunPeach"/></svg>
+        <svg class="heksa__lily heksa__lily--1" aria-hidden="true"><use href="#bunga"/></svg>
+        <svg class="heksa__lily heksa__lily--2" aria-hidden="true"><use href="#bunga"/></svg>
+        <svg class="heksa__lily heksa__lily--3" aria-hidden="true"><use href="#bunga"/></svg>
+        <p class="heksa__nama">
+          <span data-isi="wanita.panggilan">Husna</span>
+          <span class="dan">&amp;</span>
+          <span data-isi="pria.panggilan">Bima</span>
+        </p>
       </div>
-      <p class="hero__nama" data-anim="naik">
-        <span data-isi="wanita.panggilan">Husna</span> <i>&amp;</i> <span data-isi="pria.panggilan">Bima</span>
-      </p>
       <p class="hero__tgl" data-anim="naik" data-isi="hariUtama">Jum'at, 23 Oktober 2026</p>
       <svg class="hiasan" data-anim="naik" aria-hidden="true"><use href="#hiasan"/></svg>
       <p class="gulir" data-anim="naik" aria-hidden="true"><span></span>Gulir ke bawah</p>
     </section>
 
     <section class="bagian bagian--salam" id="salam">
+      <svg class="sudut sudut--kanan-atas sudut--kecil" aria-hidden="true"><use href="#rangkaian"/></svg>
       <p class="bismillah" data-anim="zoom" lang="ar" dir="rtl">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-      <p class="salam" data-anim="naik">Assalamu'alaikum warahmatullahi wabarakatuh</p>
+      <p class="salam" data-anim="naik">Assalamu'alaikum Wr. Wb.</p>
       <p class="teks" data-anim="naik">
-        Dengan penuh syukur atas rahmat Allah SWT, kami ingin berbagi kabar bahagia.
-        Kami akan melangsungkan pernikahan, dan akan sangat berarti bagi kami
-        jika Anda berkenan hadir dan mendoakan.
+        Ya Allah,<br>
+        perkenankanlah putra-putri kami membuka lembaran hidup baru,
+        maka izinkanlah kami menikahkan mereka.
       </p>
 
       <figure class="ayat" data-anim="naik">
@@ -204,12 +235,28 @@
       </figure>
     </section>
 
+    <section class="bagian bagian--doa" id="doa">
+      <svg class="sudut sudut--kiri-atas sudut--kecil" aria-hidden="true"><use href="#rangkaian"/></svg>
+      <div class="pasangan" data-anim="zoom">
+        <img src="gambar/pasangan.jpg" alt="Ilustrasi kedua mempelai" width="422" height="374">
+        <svg class="kupu kupu--pasangan" aria-hidden="true"><use href="#kupu"/></svg>
+      </div>
+      <blockquote class="kutipan" data-anim="naik">
+        "Semoga Allah SWT menghimpun yang terserak dari keduanya,
+        memberkati mereka berdua, meningkatkan kualitas keturunannya
+        sebagai pembuka pintu rahmat, sumber ilmu dan hikmah
+        serta pemberi rasa aman bagi umat."
+      </blockquote>
+      <p class="kutipan__sumber" data-anim="naik">Do'a Nabi Muhammad SAW pada pernikahan putrinya Fatimah Azzahra dengan Ali bin Abi Thalib</p>
+    </section>
+
     <section class="bagian bagian--mempelai" id="mempelai">
-      <h2 class="judul" data-anim="naik">Kami yang berbahagia</h2>
+      <h2 class="judul" data-anim="naik">Kedua Mempelai</h2>
       <svg class="hiasan" data-anim="naik" aria-hidden="true"><use href="#hiasan"/></svg>
 
       <article class="orang" data-anim="kiri">
         <div class="orang__bingkai" aria-hidden="true">
+          <svg class="orang__heksa"><use href="#heksa"/></svg>
           <span data-isi="wanita.inisial">H</span>
           <svg class="orang__bunga"><use href="#rangkaian"/></svg>
         </div>
@@ -223,6 +270,7 @@
 
       <article class="orang" data-anim="kanan">
         <div class="orang__bingkai" aria-hidden="true">
+          <svg class="orang__heksa"><use href="#heksa"/></svg>
           <span data-isi="pria.inisial">B</span>
           <svg class="orang__bunga"><use href="#rangkaian"/></svg>
         </div>
@@ -233,22 +281,41 @@
       </article>
     </section>
 
-    <section class="bagian bagian--gelap" id="acara">
+    <section class="bagian bagian--ungu" id="acara">
       <div class="bintang bintang--redup" aria-hidden="true"></div>
-      <h2 class="judul judul--terang" data-anim="naik">Menuju hari bahagia</h2>
+      <svg class="kupu kupu--acara" aria-hidden="true"><use href="#kupu"/></svg>
+      <h2 class="judul" data-anim="naik">Waktu &amp; Tempat</h2>
       <svg class="hiasan" data-anim="naik" aria-hidden="true"><use href="#hiasan"/></svg>
+      <p class="teks teks--kecil" data-anim="naik">
+        Dengan segala kerendahan hati dan ungkapan syukur atas karunia Allah SWT,
+        kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara:
+      </p>
+      <div class="acara" id="daftarAcara"></div>
+
       <div class="hitung" id="hitungMundur" data-anim="zoom">
         <div><b data-h="hari">0</b><span>hari</span></div>
         <div><b data-h="jam">0</b><span>jam</span></div>
         <div><b data-h="menit">0</b><span>menit</span></div>
         <div><b data-h="detik">0</b><span>detik</span></div>
       </div>
-      <div class="acara" id="daftarAcara"></div>
+
+      <div class="lokasi" id="lokasi" data-anim="naik" hidden>
+        <div class="lokasi__kertas">
+          <p class="lokasi__judul">Lokasi</p>
+          <svg class="lokasi__pin" viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><path fill="#B9A5D3" stroke="#4A3A5C" stroke-width="1.2" d="M12 22s-7-6.6-7-12a7 7 0 0 1 14 0c0 5.4-7 12-7 12z"/><circle cx="12" cy="10" r="2.6" fill="#fff" stroke="#4A3A5C" stroke-width="1.2"/></svg>
+          <p class="lokasi__alamat" id="lokasiAlamat"></p>
+          <a class="tombol" id="lokasiPeta" target="_blank" rel="noopener">Buka Google Maps</a>
+          <svg class="lokasi__pena" viewBox="0 0 140 60" aria-hidden="true">
+            <path d="M6 54C30 30 70 10 134 4C110 22 70 42 26 50Z" fill="#C3D1E6" stroke="#2B2433" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M8 54L120 10M40 44l-6-10M60 36l-5-11M80 28l-4-10M100 20l-3-9" stroke="#2B2433" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+      </div>
     </section>
 
     <section class="bagian" id="rsvp">
       <svg class="sudut sudut--kanan-atas sudut--kecil" aria-hidden="true"><use href="#rangkaian"/></svg>
-      <h2 class="judul" data-anim="naik">Konfirmasi kehadiran</h2>
+      <h2 class="judul" data-anim="naik">Konfirmasi Kehadiran</h2>
       <svg class="hiasan" data-anim="naik" aria-hidden="true"><use href="#hiasan"/></svg>
       <p class="teks teks--kecil" data-anim="naik">
         Bantu kami menyiapkan tempat dan hidangan dengan mengisi form singkat ini.
@@ -285,7 +352,7 @@
     </section>
 
     <section class="bagian bagian--lembut" id="ucapan">
-      <h2 class="judul" data-anim="naik">Doa &amp; ucapan</h2>
+      <h2 class="judul" data-anim="naik">Doa &amp; Ucapan</h2>
       <svg class="hiasan" data-anim="naik" aria-hidden="true"><use href="#hiasan"/></svg>
       <p id="ringkasan" class="ucapan__ringkas" data-anim="naik"></p>
       <ol class="ucapan__daftar" id="daftarUcapan">
@@ -297,18 +364,24 @@
     <section class="bagian bagian--penutup" id="penutup">
       <svg class="sudut sudut--kiri-atas" aria-hidden="true"><use href="#rangkaian"/></svg>
       <svg class="sudut sudut--kanan-atas" aria-hidden="true"><use href="#rangkaian"/></svg>
+      <svg class="kupu kupu--penutup" aria-hidden="true"><use href="#kupu"/></svg>
+      <img class="taman taman--bawah" src="gambar/taman.jpg" alt="" aria-hidden="true">
+
       <p class="teks" data-anim="naik">
-        Merupakan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir
-        dan memberikan doa restu.
+        Tiada rangkaian kata yang dapat kami ungkapkan selain terima kasih dari hati yang tulus
+        atas kehadiran dan do'a restu Bapak/Ibu/Saudara/i.
       </p>
       <p class="doa" data-anim="zoom" lang="ar" dir="rtl">بَارَكَ ٱللَّٰهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
       <p class="doa__arti" data-anim="naik">"Semoga Allah memberkahimu dalam suka maupun duka, dan menyatukan kalian berdua dalam kebaikan." (HR. Abu Dawud)</p>
-      <p class="salam" data-anim="naik">Wassalamu'alaikum warahmatullahi wabarakatuh</p>
+      <p class="salam" data-anim="naik">Wassalamu'alaikum Wr. Wb.</p>
       <p class="penutup__kami" data-anim="naik">Kami yang berbahagia,</p>
-      <p class="hero__nama" data-anim="zoom">
-        <span data-isi="wanita.panggilan">Husna</span> <i>&amp;</i> <span data-isi="pria.panggilan">Bima</span>
+      <div class="keluarga" data-anim="naik">
+        <p><b>Keluarga</b><span data-isi="wanita.ayah"></span><br>&amp; <span data-isi="wanita.ibu"></span></p>
+        <p><b>Keluarga</b><span data-isi="pria.ayah"></span><br>&amp; <span data-isi="pria.ibu"></span></p>
+      </div>
+      <p class="penutup__nama" data-anim="zoom">
+        <span data-isi="wanita.panggilan">Husna</span> &amp; <span data-isi="pria.panggilan">Bima</span>
       </p>
-      <p class="penutup__kel" data-anim="naik">Beserta keluarga besar kedua mempelai</p>
     </section>
 
     <footer class="kaki">Dibuat dengan doa dan cinta</footer>

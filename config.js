@@ -29,20 +29,20 @@ window.UNDANGAN = {
   },
 
   // Tanggal & jam untuk hitung mundur (format: TAHUN-BULAN-TANGGALTjam:menit+07:00)
-  tanggalUtama: "2026-10-23T08:00:00+07:00",
+  tanggalUtama: "2026-10-23T13:00:00+07:00",
 
   // Daftar acara. Kosongkan "jam" atau "tempat" jika belum pasti, barisnya akan disembunyikan.
   // Untuk memisah akad & resepsi, salin satu blok { ... } lalu ubah isinya.
   acara: [
     {
-      nama: "Akad Nikah & Walimatul 'Ursy",
+      nama: "Akad Nikah",
       hari: "Jum'at, 23 Oktober 2026",
-      jam: "",                 // contoh: "08.00 WIB – selesai"
+      jam: "13.00 WIB (Ba'da Dhuhur)",
       mulai: "",               // contoh: "2026-10-23T08:00:00+07:00" (untuk tombol simpan ke kalender)
       selesai: "",             // contoh: "2026-10-23T13:00:00+07:00"
       tanggalKalender: "2026-10-23",
-      tempat: "",              // contoh: "Kediaman Mempelai Wanita"
-      alamat: "",
+      tempat: "Dsn. Maron RT. 05 RW. 02, Ds. Mulyorejo",
+      alamat: "Kec. Ngantang, Kab. Malang",
       peta: "https://share.google/oB1gUZ0vL6hSUB4IG"
     }
   ],

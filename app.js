@@ -36,6 +36,15 @@
     var v = nilai[el.getAttribute("data-isi")];
     if (v) el.textContent = v;
   });
+  // Kata terakhir nama lengkap diberi warna ungu, seperti desain cetak
+  $$(".orang__nama").forEach(function (el) {
+    var kata = el.textContent.trim().split(/\s+/);
+    if (kata.length < 2) return;
+    var akhir = document.createElement("span");
+    akhir.textContent = kata.pop();
+    el.textContent = kata.join(" ") + " ";
+    el.appendChild(akhir);
+  });
   document.title = (W.panggilan || "") + " & " + (P.panggilan || "") + " · Undangan Pernikahan";
 
   $$("[data-ig]").forEach(function (a) {
@@ -157,16 +166,8 @@
       }
       el.appendChild(p);
     });
-    if (!a.tempat && a.peta) {
-      var cat = document.createElement("p");
-      cat.className = "acara__catatan";
-      cat.textContent = "Lokasi acara bisa dibuka lewat tombol di bawah.";
-      el.appendChild(cat);
-    }
-
     var aksi = document.createElement("div");
     aksi.className = "acara__aksi";
-    if (a.peta) aksi.appendChild(tautan(a.peta, "Lihat lokasi", "tombol tombol--emas tombol--kecil"));
     var judulKal = a.nama + " · " + (W.panggilan || "") + " & " + (P.panggilan || "");
     var tanggalKal = "";
     if (a.mulai && a.selesai) {
@@ -187,6 +188,14 @@
     el.appendChild(aksi);
     wadahAcara.appendChild(el);
   });
+
+  /* ---------- Kartu lokasi (dari acara pertama yang punya peta) ---------- */
+  var acaraPeta = (C.acara || []).filter(function (a) { return a.peta; })[0];
+  if (acaraPeta) {
+    $("#lokasiAlamat").textContent = [acaraPeta.tempat, acaraPeta.alamat].filter(Boolean).join("\n");
+    $("#lokasiPeta").href = acaraPeta.peta;
+    $("#lokasi").hidden = false;
+  }
 
   /* ---------- Hitung mundur ---------- */
   var wadahHitung = $("#hitungMundur");
@@ -415,7 +424,7 @@
     if (!ctx) return;
     var rasio = Math.min(window.devicePixelRatio || 1, 2);
     var lebar, tinggi;
-    var warna = ["#F2D3CE", "#E8B7B0", "#F7E6E2", "#FFFFFF", "#EACB8E"];
+    var warna = ["#D9CBE8", "#C7B2DD", "#EDE4F5", "#FFFFFF", "#F2C4A2"];
     var kelopak = [];
 
     function ukur() {
